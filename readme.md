@@ -1,4 +1,8 @@
-# Usar Gulp-Dev
+# Features
+**Gulp, Sass, Uglify, Browser-sync, Cssnano, Sourcemaps css, Plumber, Imagemin**
+Preinstall Bootstrap 3
+
+## Gulp-Dev
 
 Pasos a seguir para utilizar el automatizador de tareas **Gulp**
 
@@ -38,3 +42,9 @@ En caso de errores prueba instalar de nuevo los paquetes de node y bower
 $ npm install
 $ bower install
 ```
+
+## Customize gulpfile.js
+
+Primero configurar si va usar usar un proxy (para desarrollo en php u otro) en **true** y configura tu proxy(local.app.com)
+o desarrollo estático html proxy = **false** y agrega a las **variables scripts y plugins**  los scripts que necesitas que
+compile y vuelve a ejcutar gulp.
