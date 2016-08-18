@@ -1,0 +1,29 @@
+@media(max-width: 480px){
+	// helps
+	.hidden-xxs{
+		display: none,
+	}
+	.visible-xxs{
+		display: block;
+	}
+	.col-xxs{
+		width: 100%;
+	}
+	.text-center-xxs{
+		text-align: center;
+	}
+	// end helps
+	
+	
+}
+
+@media(min-width: 481px){
+	// helps
+	.hidden-xxs{
+		display: block;
+	}
+	.visible-xxs{
+		display: none;
+	}
+	// end helps
+}

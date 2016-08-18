@@ -1,0 +1,29 @@
+// ==== STYLES ==== //
+
+// Do not declare anything before the metadata block; this first section is solely for variable, function, and mixin definitions
+// Note: `bower_components` is already in Sass's path
+@import "vendor/bourbon/bourbon";
+
+// Configuration variables and settings
+@import "base/_variables";
+
+/*!
+Theme Name: #{$theme-name}
+Theme URI: #{$theme-uri}
+Author: #{$theme-author}
+Author URI: #{$theme-author-uri}
+Description: #{$theme-description}
+Version: #{$theme-version}
+Text Domain: #{$theme-text-domain}
+Domain Path: #{$theme-text-domain-path}
+*/
+
+// Reset: eliminate default browser styling (optional; commented out by default)
+@import "vendor/normalize/_normalize";
+// load bootstrap-sass
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+
+// load local styles
+@import "base/_general";
+@import "sections/_general";
+@import "responsive/_general";
