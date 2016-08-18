@@ -1,10 +1,14 @@
 {
-  "name": "App",
+  "name": "Gulp dev",
   "version": "1.0.0",
-  "description": "Frond-End app dev",
+  "description": "Frond-End app developer",
   "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kenyk7/Gulp-Dev.git"
+  },
   "scripts": {
-    "test": "null"
+    "test": "gulp setup"
   },
   "author": "Keny Romero",
   "license": "ISC",
