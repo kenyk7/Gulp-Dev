@@ -47,4 +47,4 @@ $ bower install
 
 Primero configurar si va usar usar un proxy (para desarrollo en php u otro) en **true** y configura tu proxy(local.app.com)
 o desarrollo estático html proxy = **false** y agrega a las **variables scripts y plugins**  los scripts que necesitas que
-compile y vuelve a ejcutar gulp.
+compile y vuelve a ejecutar gulp.
