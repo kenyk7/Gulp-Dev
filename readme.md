@@ -34,6 +34,7 @@ $ gulp dist
   - Con **gulp serve** solo se activa el modo de desarrollo en vivo(**.php|.html**).
   - Con **gulp** se activa también el desarrollo en vivo con escucha de **todos** los archivos de desarrollo de la carpeta **src/(js,sass,img)**  + **.php**
   - y con **gulp dist** generas los archivos para producción y ya puedes enviar los cambios al git
+  - la carpeta assets es  la carpeta de dist por default.
 
 **Recomendación**
 
