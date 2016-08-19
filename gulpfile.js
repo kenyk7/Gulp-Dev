@@ -110,7 +110,8 @@ gulp.task('serve', function(){
     browserSync.init({
       server: {
         baseDir: "./"
-      }
+      },
+      port: localPort
     });
   }
   
