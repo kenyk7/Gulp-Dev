@@ -3,6 +3,7 @@
 Pre-install Bootstrap 3: 13 material themes pre-configurados + organización de carpetas de sass
 y listo para empezar a codear.
 
+![Gulp-Dev](https://raw.githubusercontent.com/kenyk7/Gulp-Dev/master/src/Gulpdev.png "Gulp-Dev")
 ## Gulp-Dev
 
 Pasos a seguir para utilizar el automatizador de tareas **Gulp**
