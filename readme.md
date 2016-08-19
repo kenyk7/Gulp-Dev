@@ -1,6 +1,7 @@
 # Features
-**Gulp, Sass, Uglify, Browser-sync, Cssnano, Sourcemaps css, Plumber, Imagemin**
-Preinstall Bootstrap 3
+**Gulp: Sass, Uglify, Browser-sync, Cssnano, Sourcemaps css, Plumber, Imagemin**
+Pre-install Bootstrap 3: 13 material themes pre-configurados + organización de carpetas de sass
+y listo para empezar a codear.
 
 ## Gulp-Dev
 
