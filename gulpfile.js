@@ -27,6 +27,7 @@ var gulp = require('gulp'),
   plumber = require('gulp-plumber'),
   uglify = require('gulp-uglify'),
   concat = require('gulp-concat'),
+  jshint = require('gulp-jshint'),
   sass = require('gulp-sass'),
   postcss = require('gulp-postcss'),
   autoprefixer = require('autoprefixer'),
@@ -41,8 +42,8 @@ var gulp = require('gulp'),
 // sass mappgins files
 gulp.task('styles:dev', function(){
   var processors = [
-        autoprefixer({browsers: ['> 3%', 'last 2 versions', 'ie 9', 'ios 6', 'android 4']}),
-        cssnano(),
+      autoprefixer({browsers: ['> 3%', 'last 2 versions', 'ie 9', 'ios 6', 'android 4']}),
+      cssnano(),
     ];
 
   gulp.src(src + 'scss/style.scss')
@@ -58,8 +59,8 @@ gulp.task('styles:dev', function(){
 // sass dist remove source maps
 gulp.task('styles:dist', function(){
   var processors = [
-        autoprefixer({browsers: ['> 3%', 'last 2 versions', 'ie 9', 'ios 6', 'android 4']}),
-        cssnano(),
+      autoprefixer({browsers: ['> 3%', 'last 2 versions', 'ie 9', 'ios 6', 'android 4']}),
+      cssnano(),
     ];
 
   gulp.src(src + 'scss/style.scss')
@@ -86,6 +87,10 @@ gulp.task('fonts', function(){
 // minify script js
 gulp.task('main', function(){
   gulp.src(scripts)
+  .pipe(plumber())
+  .pipe(jshint())
+  .pipe(jshint.reporter('default'))
+  .pipe(jshint.reporter('fail'))
   .pipe(concat('main.js'))
   .pipe(uglify())
   .pipe(gulp.dest(dist + 'js/'));

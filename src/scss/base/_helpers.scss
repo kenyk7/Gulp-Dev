@@ -155,3 +155,8 @@ table{
 		}
 	}
 }
+
+.disable-scroll{
+	overflow: hidden;
+	position: fixed;
+}

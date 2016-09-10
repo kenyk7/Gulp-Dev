@@ -51,7 +51,7 @@
       if ($(this).scrollTop() > 100) {
         console.log('active menu scroll');
       } else {
-        console.log('active menu scroll');
+        console.log('disable menu scroll');
         
       }
     });
