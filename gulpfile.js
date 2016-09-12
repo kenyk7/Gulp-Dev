@@ -1,4 +1,4 @@
-// globals
+// config globals
 var useproxy = false;
 
 var src = './src/';
@@ -8,12 +8,12 @@ var dist = './assets/';
 var proxyUrl = 'local.app.com';
 var localPort = 8080;
 
-// my scripts
+// my scripts: default load all script of folder js/*
 var scripts = [
-  src + 'js/scripts.js'
+  src + 'js/**/*.js'
 ];
 
-// vars use bower
+// bower folder
 var bower = './bower_components/';
 // var plugins path 
 var plugins = [
@@ -38,7 +38,6 @@ var gulp = require('gulp'),
   reload = browserSync.reload;
 
 // tasks
-// minify sass to css
 // sass mappgins files
 gulp.task('styles:dev', function(){
   var processors = [
@@ -96,7 +95,7 @@ gulp.task('main', function(){
   .pipe(gulp.dest(dist + 'js/'));
 });
 
-// pluginss js concat
+// plugins js minify
 gulp.task('pluginsjs', function(){
   gulp.src(plugins)
   .pipe(concat('plugins.js'))
@@ -119,7 +118,6 @@ gulp.task('serve', function(){
       port: localPort
     });
   }
-  
   gulp.watch(src + 'scss/**/*.scss', ['styles:dev']);
   gulp.watch(src + 'js/**/*.js', ['main']).on('change', reload);
   gulp.watch(src + 'img/*(*.png|*.jpg|*.jpeg|*.gif|*.svg)').on('change', reload);
@@ -127,12 +125,13 @@ gulp.task('serve', function(){
   gulp.watch('*.html').on('change', reload);
 });
 
-// tasks globals
+
+// tasks globals not sass
 gulp.task('static', ['pluginsjs', 'main', 'images', 'fonts']);
 
-// build
+// build all
 gulp.task('build', ['styles:dev', 'static']);
 // gulp minify all
 gulp.task('dist', ['styles:dist', 'static']);
-// dev
+// dev default tasks
 gulp.task('default', ['build', 'serve']);
