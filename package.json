@@ -1,17 +1,20 @@
 {
   "name": "Gulpdev",
   "version": "1.0.0",
-  "description": "Frond-End app developer",
+  "description": "Boilerplate customizable para desarrollo frontend y backend",
   "main": "gulpfile.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/kenyk7/Gulp-Dev.git"
   },
   "scripts": {
-    "test": "gulp setup"
+    "dev-serve": "gulp",
+    "dev-only": "gulp build",
+    "serve": "gulp serve",
+    "dist": "gulp dist"
   },
-  "author": "Keny Romero",
-  "license": "ISC",
+  "author": "Kenyk Romero",
+  "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^6.4.0",
     "browser-sync": "^2.14.0",
