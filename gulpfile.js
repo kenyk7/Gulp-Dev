@@ -41,9 +41,8 @@ var gulp = require('gulp'),
 // sass mappgins files
 gulp.task('styles:dev', function(){
   var processors = [
-      autoprefixer({browsers: ['> 3%', 'last 2 versions', 'ie 9', 'ios 6', 'android 4']}),
-      cssnano(),
-    ];
+    autoprefixer({browsers: ['> 3%', 'last 2 versions', 'ie 9', 'ios 6', 'android 4']})
+  ];
 
   gulp.src(src + 'scss/style.scss')
   .pipe(plumber())
@@ -58,16 +57,15 @@ gulp.task('styles:dev', function(){
 // sass dist remove source maps
 gulp.task('styles:dist', function(){
   var processors = [
-      autoprefixer({browsers: ['> 3%', 'last 2 versions', 'ie 9', 'ios 6', 'android 4']}),
-      cssnano(),
-    ];
+    autoprefixer({browsers: ['> 3%', 'last 2 versions', 'ie 9', 'ios 6', 'android 4']}),
+    cssnano()
+  ];
 
   gulp.src(src + 'scss/style.scss')
   .pipe(plumber())
   .pipe(sass())
   .pipe(postcss(processors))
-  .pipe(gulp.dest(dist + 'css/'))
-  .pipe(browserSync.stream());
+  .pipe(gulp.dest(dist + 'css/'));
 });
 
 // minify images
