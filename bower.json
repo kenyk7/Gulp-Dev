@@ -10,6 +10,10 @@
   ],
   "dependencies": {
     "jquery": "<3 >1.11",
-    "bootstrap-sass": "~3.3.6"
+    "bootstrap-sass": "~3.3.6",
+    "normalize-css": "^4.2.0"
+  },
+  "devDependencies": {
+    "bourbon": "^4.2.7"
   }
 }
