@@ -1,9 +1,9 @@
 // 991 -
-@media(max-width: $screen-sm-max){
+@include maxw(sm){
 	// css 
 }
 
 // 992 +
-@media(min-width: $screen-md-min){
+@include minw(sm){
 	// css 
 }

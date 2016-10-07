@@ -1,9 +1,9 @@
 // 767 -
-@media(max-width: $screen-xs-max){
+@include maxw(xs){
 	// css
 }
 
 // 768 +
-@media(min-width: $screen-sm-min){
+@include minw(xs){
 	// css
 }

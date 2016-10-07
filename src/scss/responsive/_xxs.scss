@@ -1,5 +1,5 @@
 // 479 -
-@media(max-width: $screen-xs-min - 1){
+@include maxw(xxs){
 	.col-xxs{
 		width: 100%;
 	}
@@ -9,6 +9,6 @@
 }
 
 // 480 +
-@media(min-width: $screen-xs-min){
+@include minw(xxs){
 	// css
 }
