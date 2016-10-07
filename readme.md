@@ -51,3 +51,78 @@ $ bower install
 Primero configurar si va usar usar un proxy (para desarrollo en php u otro) en **true** y configura tu proxy(local.app.com)
 o desarrollo estático html proxy = **false** y agrega a las **variables scripts y plugins**  los scripts que necesitas que
 compile y vuelve a ejecutar gulp.
+
+## Sass utils core
+Use sass mixin responsive helpers file in `sass/mixin/_media_queries.scss`
+
+Example use `@include maxw(xs){};` for  `@media (max-width: 767px){};`
+
+Or use `@include minw(xs){};` for  `@media (min-width: 768px){};`
+#### Input sass example
+```sh
+.my-component{
+    // use example props test
+    width: 25%;
+    font-size: 15px;
+    & &-title{
+        color: blue;
+    }
+    // use max-width
+    @include maxw(sm){
+        width: 50%;
+    }
+    @include maxw(xs){
+        width: 75%;
+    }
+    @include maxw(xxs){
+        width: 100%;
+    }
+    // use min-width
+    @include minw(xs){
+        font-size: 18px;
+    }
+}
+```
+#### Output css
+```sh
+.my-component{
+    width: 25%;
+    font-size: 15px;
+}
+.my-component .my-component-title{
+    color: blue;
+}
+@media (max-width: 991px) {
+    .my-component{
+        width: 50%;
+    }
+}
+@media (max-width: 767px) {
+    .my-component{
+        width: 75%;
+    }
+}
+@media (max-width: 479px) {
+    .my-component{
+        width: 100%;
+    }
+}
+@media (min-width: 768px) {
+    .my-component{
+        font-size: 18px;
+    }
+}
+```
+
+#### Existing mixin media queries:
+Mixin `maxw($breakpoint)` with parameters **md** = 1199px , **sm** = 991px , **xs** = 767px , **xxs** = 479px.
+
+Example `@include maxw(md){...};`  output  `@media (max-width: 1199px){...};`
+
+Mixin `minw($breakpoint)` with parameters **md** = 1200px , **sm** = 992px , **xs** = 768px , **xxs** = 480px.
+
+Example `@include minw(xs){...};`  output  `@media (max-width: 768px){...};`
+
+License
+----
+MIT
