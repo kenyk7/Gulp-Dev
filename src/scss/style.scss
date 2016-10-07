@@ -1,10 +1,12 @@
 // ==== STYLES ==== //
 
-// Note: `bower_components` is already in Sass's path
+// load bourbon sass helpers
 @import "bower_components/bourbon/app/assets/stylesheets/_bourbon";
 
 // Configuration variables and settings
-@import "base/_variables";
+@import "_variables";
+// add mixins
+@import "mixin/_general";
 
 /*!
 Theme Name: #{$theme-name}
@@ -14,16 +16,16 @@ Author URI: #{$theme-author-uri}
 Description: #{$theme-description}
 Version: #{$theme-version}
 Text Domain: #{$theme-text-domain}
-Domain Path: #{$theme-text-domain-path}
 */
-
-// normalize css
-@import "bower_components/normalize-css/normalize";
 
 // load bootstrap-sass
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 
-// load local styles
+// load plugins
+
+// end load plugins
+
+// local styles
 @import "base/_general";
 @import "sections/_general";
 @import "responsive/_general";

@@ -60,7 +60,7 @@ $t-time: 0.3s;
 		.navbar-toggle{
 			@include navbar-vertical-align(34px + 10);
 		}
-		@media (min-width:768px){
+		@include minw(xs){
 			.navbar-nav>li>a{
 				padding-top: $navbar-padding-vertical - 5;
 	        	padding-bottom: $navbar-padding-vertical - 5;

@@ -32,6 +32,7 @@ var gulp = require('gulp'),
   postcss = require('gulp-postcss'),
   autoprefixer = require('autoprefixer'),
   cssnano = require('cssnano'),
+  gcmq = require('gulp-group-css-media-queries'),
   sourcemaps = require('gulp-sourcemaps'),
   imagemin = require('gulp-imagemin'),
   browserSync = require('browser-sync').create(),
@@ -48,6 +49,7 @@ gulp.task('styles:dev', function(){
   .pipe(plumber())
   .pipe(sourcemaps.init())
   .pipe(sass())
+  .pipe(gcmq())
   .pipe(postcss(processors))
   .pipe(sourcemaps.write())
   .pipe(gulp.dest(dist + 'css/'))
@@ -64,6 +66,7 @@ gulp.task('styles:dist', function(){
   gulp.src(src + 'scss/style.scss')
   .pipe(plumber())
   .pipe(sass())
+  .pipe(gcmq())
   .pipe(postcss(processors))
   .pipe(gulp.dest(dist + 'css/'));
 });
