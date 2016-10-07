@@ -4,7 +4,52 @@
 *{
 	outline: none !important;
 }
+input::-webkit-input-placeholder {opacity: 1;}
+
 body{
-	font-weight: 300;
-	padding-top: $navbar-height;
+	overflow-x: hidden;
+	&.modal-open{
+		overflow: hidden;
+		@media (max-width: $screen-xs-max){
+			position: fixed;
+			left: 0;
+			right: 0;
+		}
+	}
+}
+
+.ws{
+	height: 100vh;
+	position: relative;
+	background-position: center center;
+	background-size: cover;
+	overflow: hidden;
+	background-image: url('https://hd.unsplash.com/photo-1452421822248-d4c2b47f0c81');
+	color: #fff;
+	&:before{
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: rgba(0,0,0,0.4);
+	}
+	.container{
+		display: table;
+		height: 100%;
+		.container-content{
+			display: table-cell;
+			vertical-align: middle;
+			position: relative;
+		}
+	}
+	.scroll-indicator{
+		text-align: center;
+		position: absolute;
+		left: 50%;
+		transform:translateX(-50%);
+		bottom: 15px;
+		z-index: 9;
+	}
 }

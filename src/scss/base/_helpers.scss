@@ -11,6 +11,9 @@
 .text-normal{
 	text-transform: none !important;
 }
+.text-ellipsis{
+	white-space:nowrap; overflow: hidden; text-overflow: ellipsis;
+}
 .round{
     border-radius: 50% !important;
 }
@@ -159,4 +162,24 @@ table{
 .disable-scroll{
 	overflow: hidden;
 	position: fixed;
+	@media (max-width: $screen-xs-max){
+		position: fixed;
+		left: 0;
+		right: 0;
+	}
+}
+
+// responsive helpers
+
+.hidden-xxs{
+	display: none;
+	@media(min-width: $screen-xs-min){
+		display: block;
+	}
+}
+.visible-xxs{
+	display: block;
+	@media(min-width: $screen-xs-min){
+		display: none;
+	}
 }

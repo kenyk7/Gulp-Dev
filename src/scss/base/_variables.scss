@@ -51,45 +51,51 @@ $imagesPath: '../img/';
 
 // default indigo
 $brand-primary: #303F9F;
+$brand-second: #000;
+
 
 $brand-success: #4caf50;
-$brand-info: #9c27b0;
+$brand-info: #00bcd4;
 $brand-warning: #f39c12;
 $brand-danger: #e74c3c;
 
-$brand-dark : #666;
+$brand-dark : #768ea3;
 
-$body-bg: #fdfdfd;
+$body-bg: #fff;
 
-$grid-gutter-width: 20px !default;
+$grid-gutter-width: 30px !default;
 
 /**
  * Fonts
  */
 $font-size-base: 15px !default;
 
-$font-family-sans-serif:  Arial, "Helvetica Neue", Helvetica, sans-serif;
+$font-family-sans-serif:  'Lato', sans-serif;
 $headings-font-weight: 500 !default;
-
-// custom fonts local
-// $font-100: "font-name-100", sans-serif;
-// $font-300: "font-name-300", sans-serif;
-// $font-400: "font-name-400", sans-serif;
-// $font-600: "font-name-600", sans-serif;
 
 $font-path: '../fonts/';
 $icon-font-path: '../fonts/bootstrap/';
 
 // navbar
-$navbar-height: 60px;
-$navbar-default-bg: rgb(255, 255, 255);
-$navbar-inverse-color: rgb(238, 238, 238);
-$navbar-inverse-bg: $brand-primary;
-$navbar-inverse-link-color: rgb(238, 238, 238);
+$navbar-height: 70px;
+// default
+$navbar-default-color: #555;
+$navbar-default-bg: #fff;
+$navbar-default-link-color: $navbar-default-color;
+$navbar-default-link-hover-color: darken($navbar-default-link-color, 5%);
+$navbar-default-link-active-color: $navbar-default-link-hover-color;
 
+// inverse
+$navbar-inverse-color: #f0f0f0;
+$navbar-inverse-bg: $brand-primary;
+$navbar-inverse-link-color: $navbar-inverse-color;
+$navbar-inverse-link-hover-color: lighten($navbar-inverse-link-color, 5%);
+$navbar-inverse-link-active-color: $navbar-inverse-link-hover-color;
+
+$grid-float-breakpoint: 992px;
 
 // buttons
-$btn-default-color: #333 !default;
+$btn-default-color: #222 !default;
 $btn-default-bg: #fff !default;
 $btn-default-border: #ddd !default;
 
@@ -102,17 +108,17 @@ $breadcrumb-separator: "\203A" !default;
 
 
 // radius
+$border-radius-small: 2px;
 $border-radius-base: 2px;
 $border-radius-large: 2px;
-$border-radius-small: 2px;
 
 // paddings
-// $padding-base-vertical: 7px;
-// $padding-base-horizontal : 15px;
-// $padding-xs-vertical : 2px;
+$padding-base-vertical: 7px;
+// $padding-base-horizontal : 20px;
+$padding-xs-vertical : 4px;
 // $padding-xs-horizontal : 6px;
 // $padding-large-vertical : 10px;
-// $padding-large-horizontal : 25px;
+// $padding-large-horizontal : 30px;
 
 // states
 $state-success-text: $brand-success;

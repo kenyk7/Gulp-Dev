@@ -31,6 +31,31 @@
 			smoothScroll($(this.hash));
 		});
 		// use <a href="#section2" class="scroll-target">Scroll to</a>
+		
+		// slick
+		var slickFulled = $('.slick-fulled');
+		// slickFulled.slick({
+		// 	dots: true,
+		// 	fade: true,
+		// 	arrows: false,
+		// 	infinite: true,
+		// 	autoplay: true,
+		// 	autoplaySpeed: 5000,
+		// 	speed: 1000,
+		// 	slidesToShow: 1,
+		// 	slidesToScroll: 1,
+		// 	adaptiveHeight: false,
+		// 	responsive: [
+		// 		{
+		// 			breakpoint: 767,
+		// 			settings: {
+		// 				fade: false
+		// 			}
+		// 		}
+		// 	]
+		// });
+		
+		// new WOW().init();
 
 		/**
 		 * Initialize functions
@@ -41,16 +66,60 @@
 		 * Dom events run
 		*/
 
+		if ($(window).width() < 768) {
+			$('.ws').css('height', window.innerHeight + 'px');
+		}
+
 		// scrolling
 		$(window).scroll(function () {
-			if ($(this).scrollTop() > 100) {
-				console.log('active menu fixed on scrolling');
+			if ($(this).scrollTop() > 70) {
+				$('.navbar-fixed-top').addClass('navbar-scroll').removeClass('navbar-transparent');
 			} else {
-				console.log('disable menu fixed on scrolling');
+				$('.navbar-fixed-top').removeClass('navbar-scroll').addClass('navbar-transparent');
 			}
 		});
 
-		console.log('hello main');
+		$(".navbar-toggle").on('click', function(event) {
+			event.preventDefault();
+			/* Act on the event */
+			if($(window).scrollTop() < 70){
+				$('.navbar-fixed-top').toggleClass('navbar-transparent');
+			}
+		});
+
+		// center modal
+		function setModalMaxHeight(element) {
+			this.$element     = $(element);  
+			this.$content     = this.$element.find('.modal-content');
+			var borderWidth   = this.$content.outerHeight() - this.$content.innerHeight();
+			var dialogMargin  = $(window).width() < 768 ? 20 : 60;
+			var contentHeight = $(window).height() - (dialogMargin + borderWidth);
+			var headerHeight  = this.$element.find('.modal-header').outerHeight() || 0;
+			var footerHeight  = this.$element.find('.modal-footer').outerHeight() || 0;
+			var maxHeight     = contentHeight - (headerHeight + footerHeight);
+
+		 	this.$content.css({
+				'overflow': 'hidden'
+		 	});
+		  
+		 	this.$element
+			.find('.modal-body').css({
+			  'max-height': maxHeight,
+			  'overflow-y': 'auto'
+			});
+		}
+
+		$('.modal').on('show.bs.modal', function() {
+		 	$(this).show(); 
+		 	setModalMaxHeight(this);
+		});
+
+		$(window).resize(function() {
+		 	if ($('.modal.in').length == 1) {
+				setModalMaxHeight($('.modal.in'));
+		  	}
+		});
+		// end center modal
 
 	});
 }(jQuery));

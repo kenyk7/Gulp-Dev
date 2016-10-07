@@ -1,11 +1,9 @@
-// tablet to xxs
-@media(max-width: 767px){
-	.text-center-xs{
-		text-align: center;
-	}
+// 767 -
+@media(max-width: $screen-xs-max){
+	// css
 }
 
-// tablet to lg
-@media(min-width: 768px){
-
+// 768 +
+@media(min-width: $screen-sm-min){
+	// css
 }

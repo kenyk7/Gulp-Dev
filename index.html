@@ -10,7 +10,8 @@
   <!-- icons: default-->
   <link href="favicon.ico" rel="shortcut icon" type="image/ico">
 	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="assets/css/style.css" >
+	<link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
@@ -20,40 +21,33 @@
 </head>
 <body>
 
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-inverse navbar-transparent navbar-fixed-top" role="navigation">
 	<div class="container">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menu">
 				<span class="sr-only">Toggle navigation</span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#">GulpDev</a>
+			<a class="navbar-brand" href="#">Gulp.dev</a>
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse navbar-ex1-collapse">
-			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Link</a></li>
-				<li><a href="#">Link</a></li>
-			</ul>
-			<form class="navbar-form navbar-left" role="search">
-				<div class="form-group">
-					<input type="text" class="form-control" placeholder="Search">
-				</div>
-				<button type="submit" class="btn btn-default">Submit</button>
-			</form>
+		<div class="collapse navbar-collapse navbar-menu">
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#">Link</a></li>
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Style guide</a></li>
+        <li><a href="#">Contact</a></li>
+				<li><a href="#"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a></li>
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Es <b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="#">Action</a></li>
-						<li><a href="#">Another action</a></li>
-						<li><a href="#">Something else here</a></li>
-						<li><a href="#">Separated link</a></li>
+						<li><a href="#">Español</a></li>
+						<li><a href="#">English</a></li>
+						<li><a href="#">Portugues</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -61,13 +55,22 @@
 	</div>
 </nav>
 
-<div class="jumbotron">
+<div class="jumbotron ws text-center">
 	<div class="container">
-		<h1>Welcome to GulpDev</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum labore nam voluptatum qui! Et obcaecati mollitia, eligendi excepturi, explicabo corrupti molestias.</p>
-		<p>
-			<a class="btn btn-primary btn-lg" id="active-menu">Learn more</a>
-		</p>
+		<div class="container-content">
+      <h1>Welcome to Gulp.dev</h1>
+      <p>Boostrap initial proyect for dev Front-end</p>
+      <p>
+        <a class="btn btn-line btn-line-primary btn-lg">Learn more</a>
+        <a class="btn btn-line btn-line-second">Learn more</a>
+        <a class="btn btn-line btn-line-default btn-xs">Learn more</a>
+      </p>
+      <p>
+        <a class="btn btn-primary btn-lg">Learn more</a>
+        <a class="btn btn-second">Learn more</a>
+        <a class="btn btn-default btn-default-bg btn-xs">Learn more</a>
+      </p>
+    </div>
 	</div>
 </div>
 
@@ -101,7 +104,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <p class="navbar-text navbar-text-title hidden-xs">Mess experiencies</p>
               <ul class="nav navbar-nav navbar-right">
-                <li>
+                <li class="active">
                   <a href="#">
                     Link
                   </a>
@@ -147,7 +150,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
               <p class="navbar-text navbar-text-title hidden-xs">Mess experiencies</p>
               <ul class="nav navbar-nav navbar-right">
-                <li>
+                <li class="active">
                   <a href="#">
                     Link
                   </a>

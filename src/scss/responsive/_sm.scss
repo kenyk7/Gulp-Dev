@@ -1,19 +1,9 @@
-// md to xs
-@media(max-width: $screen-lg-min){
-	
-}
-
-// tablet to xs
+// 991 -
 @media(max-width: $screen-sm-max){
-	
+	// css 
 }
 
-// tablet to lg
-@media(min-width: $screen-sm-max){
-	
-}
-
-// tablet xs -> sm
-@media(min-width: $screen-xs-max) and (max-width: $screen-sm-max){
-	
+// 992 +
+@media(min-width: $screen-md-min){
+	// css 
 }
