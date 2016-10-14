@@ -76,7 +76,7 @@ gulp.task('styles:dist', function(){
 
 // minify images
 gulp.task('images', function(){
-  gulp.src(src + 'img/**/*')
+  gulp.src(src + 'img/**/*.+(png|jpg|jpeg|gif|svg)')
   .pipe(imagemin())
   .pipe(gulp.dest(dist + 'img/'));
 });
