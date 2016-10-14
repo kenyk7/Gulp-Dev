@@ -19,13 +19,13 @@ body{
 }
 
 .ws{
+	color: #fff;
 	height: 100vh;
 	position: relative;
 	background-position: center center;
 	background-size: cover;
-	overflow: hidden;
 	background-image: url('https://hd.unsplash.com/photo-1452421822248-d4c2b47f0c81');
-	color: #fff;
+	overflow: hidden;
 	&:before{
 		content: "";
 		position: absolute;
