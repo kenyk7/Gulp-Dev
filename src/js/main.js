@@ -17,45 +17,22 @@
 		// Bootstrap
 		$('[data-toggle="popover"]').popover();
 		$('[data-toggle="tooltip"]').tooltip();
+		
 
-		// scroll target id mini plugin use var scrollArrow
+		// Scroll target id mini plugin use var scrollArrow
 		function smoothScroll(target) {
 			$('body,html').animate(
 				{'scrollTop': target.offset().top - 80},
 				500
 			);
 		}
-		//smooth scroll active
+		// Smooth scroll on
 		scrollArrow.on('click', function(e){
 			e.preventDefault();
 			smoothScroll($(this.hash));
 		});
 		// use <a href="#section2" class="scroll-target">Scroll to</a>
 		
-		// slick
-		var slickFulled = $('.slick-fulled');
-		// slickFulled.slick({
-		// 	dots: true,
-		// 	fade: true,
-		// 	arrows: false,
-		// 	infinite: true,
-		// 	autoplay: true,
-		// 	autoplaySpeed: 5000,
-		// 	speed: 1000,
-		// 	slidesToShow: 1,
-		// 	slidesToScroll: 1,
-		// 	adaptiveHeight: false,
-		// 	responsive: [
-		// 		{
-		// 			breakpoint: 767,
-		// 			settings: {
-		// 				fade: false
-		// 			}
-		// 		}
-		// 	]
-		// });
-		
-		// new WOW().init();
 
 		/**
 		 * Initialize functions
@@ -70,7 +47,7 @@
 			$('.ws').css('height', window.innerHeight + 'px');
 		}
 
-		// scrolling
+		// Scrolling
 		$(window).scroll(function () {
 			if ($(this).scrollTop() > 70) {
 				$('.navbar-fixed-top').addClass('navbar-scroll').removeClass('navbar-transparent');
@@ -87,7 +64,7 @@
 			}
 		});
 
-		// center modal
+		// Center modal
 		function setModalMaxHeight(element) {
 			this.$element     = $(element);  
 			this.$content     = this.$element.find('.modal-content');

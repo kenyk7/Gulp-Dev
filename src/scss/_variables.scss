@@ -1,6 +1,7 @@
 // ==== CONFIGURATION ==== //
 
 // Set all your configuration variables here!
+// ------------------------------------------------
 $theme-name: "App dev";
 $theme-uri: "https://github.com/kenyk7";
 $theme-author:  "Keny Romero";
@@ -9,18 +10,14 @@ $theme-description: "App dev";
 $theme-version: "1.0";
 $theme-text-domain: "App";
 
-/**
- * Path to images to read from css
- */
+
+// Images path use css
+// ------------------------------------------------
 $imagesPath: '../img/';
 
-/**
- * Define global colors
- */
 
-/**
- * themes
-*/
+// Colors themes for use
+// ------------------------------------------------
 // red
 // $brand-primary: #F44336;
 // pink
@@ -48,70 +45,80 @@ $imagesPath: '../img/';
 // red dark
 // $brand-primary: #c80c3c;
 
-// default indigo
+// Define colors
+// ------------------------------------------------
 $brand-primary: #303F9F;
 $brand-second: #000;
-
 
 $brand-success: #4caf50;
 $brand-info: #00bcd4;
 $brand-warning: #f39c12;
 $brand-danger: #e74c3c;
 
-$brand-dark : #768ea3;
+$brand-dark: #606c76;
 
+// Background body
+// ------------------------------------------------
 $body-bg: #fff;
 
+
+// Grid size
+// ------------------------------------------------
 $grid-gutter-width: 30px !default;
 
-/**
- * Fonts
- */
-$font-size-base: 15px !default;
 
+// Default indigo
+// ------------------------------------------------
+$font-size-base: 15px !default;
 $font-family-sans-serif:  'Lato', sans-serif;
 $headings-font-weight: 500 !default;
-
 $font-path: '../fonts/';
 $icon-font-path: '../fonts/bootstrap/';
 
-// navbar
+
+// Navbars
+// ------------------------------------------------
 $navbar-height: 70px;
-// default
+$grid-float-breakpoint: 992px;
+
+// Default
 $navbar-default-color: #555;
 $navbar-default-bg: #fff;
 $navbar-default-link-color: $navbar-default-color;
 $navbar-default-link-hover-color: darken($navbar-default-link-color, 5%);
 $navbar-default-link-active-color: $navbar-default-link-hover-color;
 
-// inverse
+// Inverse
 $navbar-inverse-color: #f0f0f0;
 $navbar-inverse-bg: $brand-primary;
 $navbar-inverse-link-color: $navbar-inverse-color;
 $navbar-inverse-link-hover-color: lighten($navbar-inverse-link-color, 5%);
 $navbar-inverse-link-active-color: $navbar-inverse-link-hover-color;
 
-$grid-float-breakpoint: 992px;
-
-// buttons
+// Buttons
+// ------------------------------------------------
 $btn-default-color: #222 !default;
 $btn-default-bg: #fff !default;
 $btn-default-border: #ddd !default;
 
 
 // Breadcrumbs
+// ------------------------------------------------
 $breadcrumb-padding-vertical: 0px !default;
 $breadcrumb-padding-horizontal: 0px !default;
 $breadcrumb-bg: $body-bg !default;
 $breadcrumb-separator: "\203A" !default;
 
 
-// radius
+// Radius
+// ------------------------------------------------
 $border-radius-small: 2px;
 $border-radius-base: 2px;
 $border-radius-large: 2px;
 
-// paddings
+
+// Paddings
+// ------------------------------------------------
 $padding-base-vertical: 7px;
 // $padding-base-horizontal : 20px;
 $padding-xs-vertical : 4px;
@@ -119,13 +126,17 @@ $padding-xs-vertical : 4px;
 // $padding-large-vertical : 10px;
 // $padding-large-horizontal : 30px;
 
-// states
+
+// States
+// ------------------------------------------------
 $state-success-text: $brand-success;
 $state-info-text: $brand-info;
 $state-warning-text: $brand-warning;
 $state-danger-text: $brand-danger;
 
-// alerts
+
+// Alerts
+// ------------------------------------------------
 $alert-success-text: rgb(255, 255, 255);
 $alert-warning-text: rgb(255, 255, 255);
 $alert-danger-text: rgb(255, 255, 255);
@@ -140,7 +151,9 @@ $alert-danger-border:$brand-danger;
 $alert-info-bg:$brand-info;
 $alert-info-border:$brand-info;
 
-// panels
+
+// Panels
+// ------------------------------------------------
 $panel-success-text: rgb(255, 255, 255);
 $panel-info-text: rgb(255, 255, 255);
 $panel-warning-text: rgb(255, 255, 255);
@@ -155,14 +168,21 @@ $panel-danger-border:$brand-danger;
 $panel-info-heading-bg:$brand-info;
 $panel-info-border:$brand-info;
 
-// dropdown
+
+// Dropdown
+// ------------------------------------------------
 $dropdown-border : transparent;
 
-// pagintation
 
-// progress
+// Pagintation
+// ------------------------------------------------
+
+
+// Progress
+// ------------------------------------------------
+$grid-float-breakpoint: 992px;
 $progress-bg: #555;
 
-/**
- * my vars
-*/
+
+// Others vars: my vars 
+// ------------------------------------------------

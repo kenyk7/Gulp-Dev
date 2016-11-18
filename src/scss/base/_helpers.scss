@@ -2,7 +2,9 @@
  * Classes to help you in your work
  */
 
-// text 
+
+// Text
+// ------------------------------------------------
 .upper{
     text-transform: uppercase !important;
 }
@@ -19,7 +21,9 @@
 	white-space:nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 
-// btn helpers
+
+// Btn helpers
+// ------------------------------------------------
 .btn-square{
     border-radius: 0 !important;
 }
@@ -27,32 +31,38 @@
     border-radius: 50px !important;
 }
 
-// font sizes text 12 to 18
+
+// Font sizes text 12 to 18
+// ------------------------------------------------
 @for $i from 0 through 6 {
     .fz-#{$i + 12} {
        font-size: $i + 12px !important;
     }
 }
 
-// margins helpers
-@mixin margins($sufix, $d){
+
+// Margins helpers mixin: margins step 5 in 5 to 50
+// ------------------------------------------------
+@mixin margins($sufix, $direction){
 	@for $i from 0 through 8 {
 	    .#{$sufix}-#{$i * 5} {
-	        margin-#{$d}: $i * 5px !important;
+	        margin-#{$direction}: $i * 5px !important;
 	    }
 	}
 }
 
-// margin tops
+// margin top
 @include margins('mt', 'top');
-// margin tops
+// margin bottom
 @include margins('mb', 'bottom');
-// margin tops
+// margin left
 @include margins('ml', 'left');
-// margin tops
+// margin right
 @include margins('mr', 'right');
 
-// tables
+
+// Tables
+// ------------------------------------------------
 table{
 	thead{
 		th{
@@ -83,7 +93,8 @@ table{
 }
 
 
-// others
+// Others
+// ------------------------------------------------
 .inline{
 	display: inline-block !important;
 }
@@ -92,9 +103,6 @@ table{
 }
 .no-resize{
     resize: none;
-}
-.round{
-    border-radius: 50% !important;
 }
 
 .disable-scroll{
@@ -107,16 +115,28 @@ table{
 	}
 }
 
-// responsive helpers
+// Responsive helpers
+// ------------------------------------------------
 .hidden-xxs{
 	display: none;
 	@include minw(xxs){
 		display: block;
 	}
 }
+
 .visible-xxs{
 	display: block;
 	@include minw(xxs){
 		display: none;
+	}
+}
+
+@include maxw(xxs){
+	// reset to .col-* bootstrap
+	.col-xxs{
+		width: 100%;
+	}
+	.text-center-xxs{
+		text-align: center;
 	}
 }

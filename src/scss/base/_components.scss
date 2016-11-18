@@ -1,3 +1,5 @@
+// Mixin btn lines
+// ------------------------------------------------
 @mixin btnLineExtend($color, $hover){
 	border-color: $color !important;
 	color: $color;
@@ -7,6 +9,9 @@
 	}
 }
 
+
+// Btn line default
+// ------------------------------------------------
 .btn-line{
 	background-color: transparent;
 	border-width: 1px;
@@ -30,11 +35,16 @@
 	}
 }
 
+
+// New btn use mixin bootstrap
+// ------------------------------------------------
 .btn-second{
   @include button-variant(#fff, #111, #111);
 }
 
-// alerts
+
+// Alerts lines variant
+// ------------------------------------------------
 .alert-success-line{
 	@include alert-variant(transparent, $brand-success, $brand-success);
 }
