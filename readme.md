@@ -10,19 +10,23 @@ Pasos a seguir para utilizar el automatizador de tareas **Gulp**
 
 ### Requisitos:
   - Tener instalado **nodejs** y **npm**
-  - Instalar **gulp**, **bower** y **browser-sync** de forma **global** 
+  - Instalar **gulp**, **bower** y **browser-sync** de forma **global**
+
 ```sh
 $ npm install -g gulp bower browser-sync
 ```
   - Una vez instalados los paquetes globales iniciamos la instalación de los paquetes locales de desarrollo 
+
 ```sh
 $ npm install
 $ bower install
 ```
+
   - Lo siguiente es abrir el archivo **gulpfile.js** y hacer la siguientes ajustes:
     - Cambiar la variable **proxyUrl** por la url de tu entorno de desarrollo local del proyecto
     - También puedes configurar el puerto(**localPort**) en el que desees que se ejecute browserSync
   - Una vez hecho lo anterior abrir una terminal en esta carpeta y ejecutar:
+
 ```sh
 $ gulp serve
 ```
@@ -32,6 +36,7 @@ $ gulp
 ```sh
 $ gulp dist
 ```
+
 **NOTA:**
   - Con **gulp serve** solo se activa el modo de desarrollo en vivo(**.php|.html**).
   - Con **gulp** se activa también el desarrollo en vivo con escucha de **todos** los archivos de desarrollo de la carpeta **src/(js,sass,img)**  + **.php**
@@ -58,60 +63,86 @@ Use sass mixin responsive helpers file in `sass/mixin/_media_queries.scss`
 Example use `@include maxw(xs){};` for  `@media (max-width: 767px){};`
 
 Or use `@include minw(xs){};` for  `@media (min-width: 768px){};`
-#### Input sass example
+
+#### Input sass example use mixin mq and style code sass for component
 ```scss
 .my-component{
     // use example props test
-    width: 25%;
-    font-size: 15px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    & &-head{
+        background: blue;
+    }
     & &-title{
-        color: blue;
+        color: white;
+    }
+    & &-body{
+        background: #eee;
+    }
+    & &-footer{
+        background: #ccc;
     }
     // use max-width
     @include maxw(sm){
-        width: 50%;
+        font-size: 16px;
     }
     @include maxw(xs){
-        width: 75%;
+        font-size: 15px;
     }
     @include maxw(xxs){
-        width: 100%;
+        font-size: 14px;
+        & &-head{
+            background: darkblue;
+        }
+    }
+    // use max-width mq custom
+    @include maxw(360px){
+        margin-bottom: 20px;
     }
     // use min-width
     @include minw(xs){
-        font-size: 18px;
+        margin-bottom: 30px;
+    }
+    // use min-width mq custom
+    @include minw(360px){
+        margin-bottom: 30px;
     }
 }
 ```
+
 #### Output css
 ```css
-.my-component{
-    width: 25%;
-    font-size: 15px;
+.my-component {
+    font-size: 18px;
+    margin-bottom: 20px;
 }
-.my-component .my-component-title{
-    color: blue;
+.my-component .my-component-head {
+    background: blue;
 }
+.my-component .my-component-title {
+    color: white;
+}
+.my-component .my-component-body {
+    background: #eee;
+}
+.my-component .my-component-footer {
+    background: #ccc;
+}
+
+@media (min-width: 360px) {
+  .my-component {
+    margin-bottom: 30px;
+  }
+}
+
 @media (max-width: 991px) {
     .my-component{
-        width: 50%;
+        font-size: 16px;
     }
 }
-@media (max-width: 767px) {
-    .my-component{
-        width: 75%;
-    }
-}
-@media (max-width: 479px) {
-    .my-component{
-        width: 100%;
-    }
-}
-@media (min-width: 768px) {
-    .my-component{
-        font-size: 18px;
-    }
-}
+
+// More props define media queries ...
+
 ```
 
 #### Existing mixin media queries:
@@ -122,6 +153,7 @@ Example `@include maxw(md){...};`  output  `@media (max-width: 1199px){...};`
 Mixin `minw($breakpoint)` with parameters **md** = 1200px , **sm** = 992px , **xs** = 768px , **xxs** = 480px.
 
 Example `@include minw(xs){...};`  output  `@media (max-width: 768px){...};`
+
 
 License
 ----
