@@ -59,7 +59,7 @@ Example use `@include maxw(xs){};` for  `@media (max-width: 767px){};`
 
 Or use `@include minw(xs){};` for  `@media (min-width: 768px){};`
 #### Input sass example
-```sh
+```scss
 .my-component{
     // use example props test
     width: 25%;
@@ -84,7 +84,7 @@ Or use `@include minw(xs){};` for  `@media (min-width: 768px){};`
 }
 ```
 #### Output css
-```sh
+```css
 .my-component{
     width: 25%;
     font-size: 15px;

@@ -33,7 +33,6 @@ var gulp = require('gulp'),
   autoprefixer = require('autoprefixer'),
   cssnano = require('cssnano'),
   gcmq = require('gulp-group-css-media-queries'),
-  shorthand = require('gulp-shorthand'),
   sourcemaps = require('gulp-sourcemaps'),
   imagemin = require('gulp-imagemin'),
   browserSync = require('browser-sync').create(),
@@ -50,8 +49,6 @@ gulp.task('styles:dev', function(){
   .pipe(plumber())
   .pipe(sourcemaps.init())
   .pipe(sass())
-  .pipe(gcmq())
-  .pipe(shorthand())
   .pipe(postcss(processors))
   .pipe(sourcemaps.write())
   .pipe(gulp.dest(dist + 'css/'))
@@ -69,7 +66,6 @@ gulp.task('styles:dist', function(){
   .pipe(plumber())
   .pipe(sass())
   .pipe(gcmq())
-  .pipe(shorthand())
   .pipe(postcss(processors))
   .pipe(gulp.dest(dist + 'css/'));
 });
