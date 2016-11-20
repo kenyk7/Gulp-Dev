@@ -10,28 +10,28 @@ Pasos a seguir para utilizar el automatizador de tareas **Gulp**
 
 ### Requisitos:
   - Tener instalado **nodejs** y **npm**
-  - Instalar **gulp**, **bower** y **browser-sync** de forma **global**
+  - Instalar **yarn**, **gulp**, **bower** y **browser-sync**:opcional de forma **global**
 
 ```sh
-$ npm install -g gulp bower browser-sync
+$ npm install -g yarn gulp bower browser-sync
 ```
   - Una vez instalados los paquetes globales iniciamos la instalación de los paquetes locales de desarrollo 
 
 ```sh
-$ npm install
+$ yarn install
 $ bower install
 ```
 
-  - Lo siguiente es abrir el archivo **gulpfile.js** y hacer la siguientes ajustes:
-    - Cambiar la variable **proxyUrl** por la url de tu entorno de desarrollo local del proyecto
+  - Lo siguiente es abrir el archivo **gulpfile.js** y hacer la siguientes ajustes(solo si estas usando un proxy):
+    - Cambiar la variable **useproxy** a true y **proxyUrl** por la url de tu entorno de desarrollo local del proyecto si estas usando un proxy
     - También puedes configurar el puerto(**localPort**) en el que desees que se ejecute browserSync
   - Una vez hecho lo anterior abrir una terminal en esta carpeta y ejecutar:
 
 ```sh
-$ gulp serve
+$ gulp
 ```
 ```sh
-$ gulp
+$ gulp serve
 ```
 ```sh
 $ gulp dist
@@ -47,7 +47,7 @@ $ gulp dist
 
 En caso de errores prueba instalar de nuevo los paquetes de node y bower
 ```sh
-$ npm install
+$ yarn install
 $ bower install
 ```
 

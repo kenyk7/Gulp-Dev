@@ -8,7 +8,9 @@
 
 
 // fix to ie, edge
-input::-webkit-input-placeholder {opacity: 1;}
+input::-webkit-input-placeholder{
+	opacity: 1;
+}
 
 body{
 	overflow-x: hidden;
