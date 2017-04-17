@@ -1,13 +1,13 @@
 // ==== STYLES ==== //
 
 // Load bourbon sass helpers
-@import "bower_components/bourbon/app/assets/stylesheets/_bourbon";
+@import "bower_components/bourbon/app/assets/stylesheets/bourbon";
 
 // Configuration variables and settings
-@import "_variables";
+@import "variables";
 
 // Add mixins
-@import "mixin/_general";
+@import "mixin/general";
 
 /*!
 Theme Name: #{$theme-name}
@@ -20,7 +20,7 @@ Text Domain: #{$theme-text-domain}
 */
 
 // Load bootstrap-sass
-@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 
 // load plugins
 
@@ -28,5 +28,5 @@ Text Domain: #{$theme-text-domain}
 
 
 // Local styles
-@import "base/_general";
-@import "sections/_general";
+@import "base/general";
+@import "sections/general";

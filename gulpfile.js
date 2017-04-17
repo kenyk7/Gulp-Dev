@@ -45,10 +45,10 @@ gulp.task('styles:dev', function(){
     autoprefixer({browsers: ['> 3%', 'last 2 versions', 'ie 9', 'ios 6', 'android 4']})
   ];
 
-  gulp.src(src + 'scss/style.scss')
+  gulp.src(src + 'scss/**/*.scss')
   .pipe(plumber())
   .pipe(sourcemaps.init())
-  .pipe(sass())
+  .pipe(sass({outputStyle: 'compressed'}))
   .pipe(postcss(processors))
   .pipe(sourcemaps.write())
   .pipe(gulp.dest(dist + 'css/'))
@@ -62,7 +62,7 @@ gulp.task('styles:dist', function(){
     cssnano()
   ];
 
-  gulp.src(src + 'scss/style.scss')
+  gulp.src(src + 'scss/**/*.scss')
   .pipe(plumber())
   .pipe(sass())
   .pipe(gcmq())

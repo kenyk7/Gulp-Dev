@@ -20,22 +20,22 @@ $minw-md: "(min-width: "#{$mq-md}")";
 @mixin maxw($breakpoint) {
 
 	@if $breakpoint == xxs {
-		@media #{$maxw-xxs} {
+		@media (max-width: "#{$mq-xxs - 1}") {
 			@content;
 		}
 	}
 	@else if $breakpoint == xs {
-		@media #{$maxw-xs} {
+		@media (max-width: "#{$mq-xs - 1}") {
 			@content;
 		}
 	}
 	@else if $breakpoint == sm {
-		@media #{$maxw-sm} {
+		@media (max-width: "#{$mq-sm - 1}") {
 			@content;
 		}
 	}
 	@else if $breakpoint == md {
-		@media #{$maxw-md} {
+		@media (max-width: "#{$mq-md - 1}") {
 			@content;
 		}
 	}
@@ -51,22 +51,22 @@ $minw-md: "(min-width: "#{$mq-md}")";
 @mixin minw($breakpoint) {
 
 	@if $breakpoint == xxs {
-		@media #{$minw-xxs} {
+		@media (min-width: "#{$mq-xxs}") {
 			@content;
 		}
 	}
 	@else if $breakpoint == xs {
-		@media #{$minw-xs} {
+		@media (min-width: "#{$mq-xs}") {
 			@content;
 		}
 	}
 	@else if $breakpoint == sm {
-		@media #{$minw-sm} {
+		@media (min-width: "#{$mq-sm}") {
 			@content;
 		}
 	}
 	@else if $breakpoint == md {
-		@media #{$minw-md} {
+		@media (min-width: "#{$mq-md}") {
 			@content;
 		}
 	}
